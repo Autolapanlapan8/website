@@ -1,0 +1,324 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #e0e0e0;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#darkModeToggle {
+  font-size: 20px;
+  padding: 6px 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Search Bar */
+.search-bar {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  width: 90%;
+  max-width: 400px;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  font-size: 16px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header with background image + overlay */
+header {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('Logo.jpeg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 3em;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+header h1, header p {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Navigation */
+nav {
+  background: #112d4e;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('Kji.jpeg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  background: #ffcc00;
+  color: black;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: #e6b800;
+}
+
+.hero h2, .hero p, .hero .btn {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero h2 { animation-delay: 0.2s; }
+.hero p { animation-delay: 0.4s; }
+.hero .btn { animation-delay: 0.6s; }
+
+/* Services */
+.services {
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.services h2 {
+  text-align: center;
+  color: #2a5298;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #f7f9fb;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #112d4e;
+  margin-bottom: 10px;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Contact */
+.contact {
+  padding: 60px 0;
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(232,240,254,0.9)),
+    url('Ji.jpeg') center/cover no-repeat;
+  text-align: center;
+  color: #112d4e;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.jam-operasional {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  font-size: 1.05em;
+}
+
+.jam-operasional li {
+  margin: 4px 0;
+}
+
+/* Location */
+.location {
+  padding: 60px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.location h2 {
+  color: #2a5298;
+  margin-bottom: 20px;
+}
+
+.location p {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background: #112d4e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Floating Buttons */
+.fab {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 28px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffcc00;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.fab:hover {
+  background-color: #e6b800;
+}
+
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 26px;
+  background: #25d366;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-decoration: none;
+  z-index: 1000;
+}
+
+/* Sticky Navbar */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+body.dark nav, body.dark footer {
+  background-color: #1e1e1e;
+}
+body.dark .card {
+  background-color: #2c2c2c;
+}
+body.dark .search-bar input {
+  background: #2c2c2c;
+  color: white;
+  border-color: #555;
+}
